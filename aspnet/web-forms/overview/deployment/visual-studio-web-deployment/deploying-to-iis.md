@@ -103,7 +103,25 @@ After installing IIS, run **IIS Manager** to make sure that the .NET Framework v
 
    ![Selecting_.NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
 
-You're now ready to publish a web application to IIS. First, however, create databases for testing.
+You're now ready to publish a web application to IIS. First, however, create a site for testing.
+
+## Create a new website
+
+In left side base expand the tree and select Sites option. Right click on sites and select **Add Website…** option.
+
+This will open a popup to input new website details. Input the following details in pop-up box.
+
+* Site name: Name of website to be appeared in IIS listing. (ie : ContosoUniversity)
+* Application pool: Select an application pool or keep the default to create new application pool same name as sitename.
+* Physical path: Enter the location of website pages on system.
+* Binding:
+   * Type: Select protocol to configure (eg: http or https)
+   * IP address: Select IP address from drop list to set dedicated IP for site or keep the default to use shared IP.
+   * Port: Enter port on which site will be accessible for users.
+   * Host name: Enter your actual domain name you want to use.
+* Start Website immediately: keep this box checked to start site.
+
+Those steps will prevent the **ERROR_SITE_DOES_NOT_EXIST** error to pop up while trying to build/configure the site
 
 <a id="sqlexpress"></a>
 
